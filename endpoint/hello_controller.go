@@ -46,5 +46,8 @@ func validRequest(request dto.ModelQueryRequest) error {
 	if len(request.Base.TraceId) == 0 || request.Base.TraceId == "" {
 		return errors.New("traceId不能为空")
 	}
+	if len(request.ModelType) == 0 || (request.ModelType != "xinghuo" && request.ModelType != "doubao") {
+		request.ModelType = "xinghuo"
+	}
 	return nil
 }

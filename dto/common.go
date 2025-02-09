@@ -9,8 +9,9 @@ type BaseEntity struct {
 }
 
 type ModelQueryRequest struct {
-	Base     *BaseEntity `json:"base"`
-	Question string      `json:"question"`
+	Base      *BaseEntity `json:"base"`
+	Question  string      `json:"question"`
+	ModelType string      `json:"modelType"`
 }
 
 type ModelQueryResponse struct {
